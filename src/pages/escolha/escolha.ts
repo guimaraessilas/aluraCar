@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { NavParams } from "ionic-angular";
+import { Acessorio } from '../../domain/carro/acessorio';
+import { Carro } from '../../domain/carro/carro';
 
 @Component({
     templateUrl: 'escolha.html',
@@ -7,17 +9,18 @@ import { NavParams } from "ionic-angular";
 })
 export class EscolhaPage{
     
-    public carro;
-    public acessorios : Object[];
+    public carro: Carro;
+    public acessorios : Acessorio[];
     private _precoTotal : number;
 
     constructor(public navParams: NavParams){
         this.carro = this.navParams.get('carroSelecionado');
         this._precoTotal = this.carro.preco;
         this.acessorios = [
-            {nome: "Freio ABS", preco: 800},
-            {nome: "Ar condicionado", preco: 1000},
-            {nome: "MP3 Player", preco: 500}
+            new Acessorio("Freio ABS", 800),
+            new Acessorio("Ar condicionado", 1000),
+            new Acessorio("MP3 Player", 500)
+            
         ];
     }
 
