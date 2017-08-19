@@ -1,0 +1,23 @@
+<script src="build/vendor.js"></script>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Alura car
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+  
+    <ion-item *ngFor="let carro of carros" (click)="seleciona(carro)">
+      <h2>{{carro.nome}}</h2>
+      <h3>{{carro.preco}}</h3>
+    </ion-item>
+  
+  </ion-list>
+
+
+</ion-content>
