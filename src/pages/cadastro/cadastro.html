@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Quase lá</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>{{ carro.nome }}</h2>
+  <p>R$ {{ precoTotal }}</p>
+
+  <form (submit)="agenda()">
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input [(ngModel)]="nome" name="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Endereco</ion-label>
+      <ion-input [(ngModel)]="endereco" name="endereco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Data</ion-label>
+      <ion-datetime [(ngModel)]="data" name="data" displayFormat="DD/MM/YY"></ion-datetime>
+    </ion-item>
+
+    <button ion-button block type="submit">Avançar no agendamento</button>
+    
+  </form>
+</ion-content>
