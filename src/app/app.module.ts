@@ -7,6 +7,8 @@ import { CadastroPage } from "../pages/cadastro/cadastro";
 import { AgendamentoService } from "../domain/agendamento/agendamento-service";
 import { Storage } from "@ionic/storage";
 import { AgendamentoDAO } from '../domain/agendamento/agendamento-dao';
+import { AgendamentosPage } from '../pages/agendamentos/agendamentos';
+
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
@@ -25,7 +27,8 @@ function provideStorage(){
     MyApp,
     HomePage,
     EscolhaPage,
-    CadastroPage
+    CadastroPage,
+    AgendamentosPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,7 +38,8 @@ function provideStorage(){
     MyApp,
     HomePage,
     EscolhaPage,
-    CadastroPage
+    CadastroPage,
+    AgendamentosPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
     AgendamentoService,

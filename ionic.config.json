@@ -1,6 +1,8 @@
 {
   "name": "aluraCar",
-  "app_id": "",
+  "app_id": "5e3cd03a",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
